@@ -1,0 +1,43 @@
+/*CSS Personalizado*/
+
+/* CARDS */
+
+.card{
+    transition:all .2s ease;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+/* INDICADORES */
+
+.indicadores{
+    background-color: rgb(9, 41, 68);
+    border-top: 4px solid #05f539;
+    border-bottom: 4px solid #77eb04; 
+}
+
+.indicadores h2{
+    color: #1c8b10;
+    font-size: 3rem;
+}
+
+.indicadores p{
+    color: #ffffff;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.indicadores .col-md-4{
+    padding: 1.5rem;
+    transition: all .3s ease;
+}
+
+.indicadores .col-md-4:hover{
+    transform: translateY(-5px);
+}
+
+.indicadores .col-md-4:not(:last-child){
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
