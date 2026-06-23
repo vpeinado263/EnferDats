@@ -41,3 +41,78 @@
 .indicadores .col-md-4:not(:last-child){
     border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+:root {
+
+    /* Colores principales */
+  
+    --primary: #0F4C81;
+    --secondary: #2D9CDB;
+    --accent: #56CCF2;
+  
+    /* Corporativos */
+  
+    --dark: #0B1F33;
+    --white: #FFFFFF;
+  
+    /* Neutros */
+  
+    --gray-light: #F4F7FA;
+    --gray: #6B7280;
+    --border: #D9E2EC;
+  
+    /* Estados */
+  
+    --success: #27AE60;
+    --warning: #F2C94C;
+    --danger: #EB5757;
+  }
+
+
+/*Gradiente para Hero*/
+
+h1 {
+    background: linear-gradient(
+135deg,
+#0B1F33 0%,
+#0F4C81 50%,
+#2D9CDB 100%
+);
+}
+
+/*Botón Principal*/
+
+.btn-primary{
+    background-color: var(--primary);
+    border: none;
+    color: white;
+}
+
+.btn-primary:hover{
+    background-color: var(--secondary);
+}
+
+/*Cards de Servicios*/
+
+.card-service{
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    transition: .3s;
+}
+
+.card-service:hover{
+    transform: translateY(-5px);
+}
+
+/*KPIs (Indicadores)*/
+
+.kpi{
+    background: linear-gradient(
+        135deg,
+        #0F4C81,
+        #2D9CDB
+    );
+    color: white;
+}
+
