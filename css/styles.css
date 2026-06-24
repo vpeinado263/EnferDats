@@ -116,3 +116,42 @@ h1 {
     color: white;
 }
 
+:root {
+
+    /* Primary */
+    --primary: #2563EB;
+  
+    /* Secondary */
+    --secondary: #4F46E5;
+  
+    /* Accent */
+    --accent: #06B6D4;
+  
+    /* Success */
+    --success: #22C55E;
+  
+    /* Light */
+    --light: #F8FAFC;
+  
+    /* Dark */
+    --dark: #0F172A;
+  
+    /* Gradients */
+    --gradient-primary: linear-gradient(
+      135deg,
+      #2563EB,
+      #4F46E5
+    );
+  
+    --gradient-tech: linear-gradient(
+      135deg,
+      #06B6D4,
+      #2563EB
+    );
+  
+    --gradient-health: linear-gradient(
+      135deg,
+      #22C55E,
+      #06B6D4
+    );
+  }
