@@ -1,157 +1,258 @@
-/*CSS Personalizado*/
+/* ============ESTILOS PERSONALIZADOS====================== */
 
-/* CARDS */
-
-.card{
-    transition:all .2s ease;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-}
-
-/* INDICADORES */
-
-.indicadores{
-    background-color: rgb(9, 41, 68);
-    border-top: 4px solid #05f539;
-    border-bottom: 4px solid #77eb04; 
-}
-
-.indicadores h2{
-    color: #1c8b10;
-    font-size: 3rem;
-}
-
-.indicadores p{
-    color: #ffffff;
-    font-size: 1rem;
-    margin-bottom: 0;
-}
-
-.indicadores .col-md-4{
-    padding: 1.5rem;
-    transition: all .3s ease;
-}
-
-.indicadores .col-md-4:hover{
-    transform: translateY(-5px);
-}
-
-.indicadores .col-md-4:not(:last-child){
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-:root {
-
-    /* Colores principales */
+   :root {
+    /* ===== COLORES PRINCIPALES ===== */
+    --primary: #2563EB;
+    --primary-light: #3B82F6;
+    --secondary: #06B6D4;
+    --accent: #22C55E;
   
-    --primary: #0F4C81;
-    --secondary: #2D9CDB;
-    --accent: #56CCF2;
-  
-    /* Corporativos */
-  
-    --dark: #0B1F33;
+    /* ===== CORPORATIVOS ===== */
+    --dark: #0F172A;
+    --dark-light: #3c485b;
     --white: #FFFFFF;
   
-    /* Neutros */
+    /* ===== NEUTROS ===== */
+    --gray-light: #F8FAFC;
+    --gray: #64748B;
+    --border: #CBD5E1;
   
-    --gray-light: #F4F7FA;
-    --gray: #6B7280;
-    --border: #D9E2EC;
-  
-    /* Estados */
-  
-    --success: #27AE60;
-    --warning: #F2C94C;
-    --danger: #EB5757;
-  }
-
-
-/*Gradiente para Hero*/
-
-h1 {
-    background: linear-gradient(
-135deg,
-#0B1F33 0%,
-#0F4C81 50%,
-#2D9CDB 100%
-);
-}
-
-/*Botón Principal*/
-
-.btn-primary{
-    background-color: var(--primary);
-    border: none;
-    color: white;
-}
-
-.btn-primary:hover{
-    background-color: var(--secondary);
-}
-
-/*Cards de Servicios*/
-
-.card-service{
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    transition: .3s;
-}
-
-.card-service:hover{
-    transform: translateY(-5px);
-}
-
-/*KPIs (Indicadores)*/
-
-.kpi{
-    background: linear-gradient(
-        135deg,
-        #0F4C81,
-        #2D9CDB
-    );
-    color: white;
-}
-
-:root {
-
-    /* Primary */
-    --primary: #2563EB;
-  
-    /* Secondary */
-    --secondary: #4F46E5;
-  
-    /* Accent */
-    --accent: #06B6D4;
-  
-    /* Success */
+    /* ===== ESTADOS ===== */
     --success: #22C55E;
+    --warning: #F59E0B;
+    --danger: #EF4444;
   
-    /* Light */
-    --light: #F8FAFC;
+    /* ===== EFECTOS (sombras y brillos) ===== */
+    --glow-blue: 0 0 20px rgba(37, 99, 235, 0.3);
+    --glow-cyan: 0 0 20px rgba(6, 182, 212, 0.3);
+    --glow-green: 0 0 20px rgba(34, 197, 94, 0.3);
+    --shadow-card: 0 8px 20px rgba(0, 0, 0, 0.04);
+    --shadow-card-hover: 0 16px 40px rgba(37, 99, 235, 0.15);
   
-    /* Dark */
-    --dark: #0F172A;
+    /* ===== GRADIENTES ===== */
+    --gradient-primary: linear-gradient(135deg, #2563EB, #4F46E5);
+    --gradient-tech: linear-gradient(135deg, #0b1d48, #000000);
+    --gradient-health: linear-gradient(135deg, #22C55E, #06B6D4);
+    --gradient-hero: linear-gradient(135deg, #2563EB, #06B6D4);
   
-    /* Gradients */
-    --gradient-primary: linear-gradient(
-      135deg,
-      #2563EB,
-      #4F46E5
-    );
-  
-    --gradient-tech: linear-gradient(
-      135deg,
-      #06B6D4,
-      #2563EB
-    );
-  
-    --gradient-health: linear-gradient(
-      135deg,
-      #22C55E,
-      #06B6D4
-    );
+    /* ===== TAMAÑOS ===== */
+    --logo-height: 2rem;
   }
+  
+  /* ---------- General ---------- */
+  body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  }
+  
+  /* ---------- Navbar ---------- */
+  .navbar {
+    background-color: var(--dark-light);
+    box-shadow: 0 2px 12px rgba(193, 27, 27, 0.1);
+  }
+  .navbar-brand img {
+    background-color: var(--border);
+    max-height: var(--logo-height);
+    width: auto;
+  }
+  .navbar-brand img:hover {
+    
+    transform: translatex(-5px);
+  }
+  .navbar .btn-info {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    color: var(--white);
+    font-weight: 600;
+  }
+  .navbar .btn-info:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+  }
+  .navbar .btn-outline-success {
+    color: var(--success);
+    border-color: var(--success);
+  }
+  .navbar .btn-outline-success:hover {
+    background-color: var(--success);
+    color: var(--white);
+  }
+  
+  /* ---------- Hero ---------- */
+  #inicio {
+    padding: 5rem 0;
+    background: var(--gradient-tech);
+  }
+  #inicio h1 {
+    background: var(--gradient-hero);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+  }
+  
+  /* ---------- Badge principal ---------- */
+  .badge.bg-primary {
+    background-color: var(--dark-light) !important;
+    font-size: 0.9rem;
+    padding: 0.5rem 1.2rem;
+    letter-spacing: 0.5px;
+  }
+  
+  /* ---------- Indicadores ---------- */
+  .indicadores {
+    background-color: var(--dark);
+    border-top: 4px solid var(--success);
+    border-bottom: 4px solid var(--accent);
+    padding: 2.5rem 0;
+  }
+  .indicadores h2 {
+    color: var(--accent);
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  .indicadores p {
+    color: var(--white);
+    font-size: 1.1rem;
+    margin-bottom: 0;
+  }
+  .indicadores .col-md-4 {
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+  .indicadores .col-md-4:hover {
+    transform: translateY(-5px);
+  }
+  .indicadores .col-md-4:not(:last-child) {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* ---------- Tarjetas (Beneficios y Áreas) ---------- */
+  .card {
+    border: none;
+    border-radius: 16px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    background-color: var(--white);
+    box-shadow: var(--shadow-card);
+  }
+  .card:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-card-hover);
+  }
+  .card .card-title {
+    color: var(--primary);
+    font-weight: 600;
+  }
+  
+  /* ---------- Sección Áreas (fondo oscuro) ---------- */
+  #areas {
+    background-color: var(--dark);
+  }
+  #areas .text-muted {
+    color: rgba(255, 255, 255, 0.7) !important;
+  }
+  #areas .card {
+    background-image: url(/assets/images/datos.webp);
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--white);
+  }
+  #areas .card .text-primary {
+    color: var(--accent) !important;
+    font-weight: 700;
+  }
+  #areas .card h4 {
+    color: var(--white);
+    font-weight: 600;
+  }
+  #areas .card p {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  /* ---------- Formulario ---------- */
+  #solicitud .bg-light-subtle {
+    background-color: var(--gray-light) !important;
+  }
+  #solicitud .card {
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .formulario-enferdata-form .form-control,
+  .formulario-enferdata-form .form-select {
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    padding: 0.7rem 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .formulario-enferdata-form .form-control:focus,
+  .formulario-enferdata-form .form-select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+  }
+  .formulario-enferdata-form .form-check-input:checked {
+    background-color: var(--primary);
+    border-color: var(--primary);
+  }
+  .formulario-enferdata-form .btn-primary {
+    background: var(--gradient-hero);
+    border: none;
+    border-radius: 50px;
+    padding: 0.8rem 2.5rem;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--glow-blue), 0 12px 24px rgba(37, 99, 235, 0.25);
+  }
+  
+  /* ---------- Footer ---------- */
+  footer {
+    background-color: var(--dark) !important;
+  }
+  footer a {
+    transition: color 0.2s, transform 0.2s;
+    display: inline-block;
+  }
+  footer a:hover {
+    color: var(--accent) !important;
+    transform: scale(1.1);
+  }
+  footer .bi {
+    font-size: 1.4rem;
+  }
+  
+  /* ---------- Modal ---------- */
+  .modal-content {
+    border-radius: 20px;
+    border: none;
+  }
+  .modal-header {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .modal-title {
+    color: var(--primary);
+    font-weight: 700;
+  }
+  
+  /* ---------- Responsive ---------- */
+  @media (max-width: 768px) {
+    #inicio {
+      padding: 3rem 0;
+      text-align: center;
+    }
+    #inicio .col-lg-6:last-child {
+      margin-top: 2rem;
+    }
+    .indicadores h2 {
+      font-size: 2.5rem;
+    }
+    .indicadores .col-md-4:not(:last-child) {
+      border-right: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .navbar-brand img {
+      max-height: 40px;
+    }
+  } 
