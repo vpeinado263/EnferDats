@@ -1,53 +1,119 @@
 /* =================================ESTILOS PERSONALIZADOS================================== */
 
-:root {
-/*  COLORES PRINCIPALES  */
-    --primary: #2563EB;
-    --primary-light: #3B82F6;
-    --secondary: #06B6D4;
-    --dark: #0F172A;
-    --dark-light: #3c485b;
+:root {  
+/*COLORES: sobrescribir*/
+--bs-primary: #2563EB;           
+--bs-secondary: #06B6D4;       
+--bs-success: #1da64f;                  
+--bs-info: #06B6D4;                     
+--bs-light: #F8FAFC;                
+--bs-dark: #141517;                   
 
-/*  EFECTOS (sombras y brillos)  */
-    --glow-blue: 0 0 20px rgba(37, 99, 235, 0.3);
-    --glow-cyan: 0 0 20px rgba(6, 182, 212, 0.3);
-    --glow-green: 0 0 20px rgba(34, 197, 94, 0.3);
-    --shadow-card: 0 8px 20px rgba(0, 0, 0, 0.04);
-    --shadow-card-hover: 0 16px 40px rgba(37, 99, 235, 0.15);
+/*Mis EFECTOS: sombras y brillos*/
+--glow-blue: 0 0 20px rgba(255, 255, 255, 0.3);
+--glow-cyan: 0 0 20px rgba(6, 182, 212, 0.3);
+--glow-green: 0 0 20px rgba(34, 197, 94, 0.3);
+--shadow-card: 0 8px 20px rgba(0, 0, 0, 0.04);
+--shadow-card-hover: 0 16px 40px rgba(37, 99, 235, 0.15);
   
-/*  GRADIENTES  */
-    --gradient-primary: linear-gradient(135deg, #2563EB, #4F46E5);
-    --gradient-tech: linear-gradient(135deg, #0b1d48, #000000);
-    --gradient-health: linear-gradient(135deg, #22C55E, #06B6D4);
-    --gradient-hero: linear-gradient(135deg, #2563EB, #06B6D4);
+/*Mis GRADIENTES: estilos tegnológico*/
+--gradient-primary: linear-gradient(135deg, #2563EB, #4F46E5);
+--gradient-tech: linear-gradient(135deg, hsl(222, 73%, 16%), #000000);
+--gradient-health: linear-gradient(135deg, #171817, #06B6D4);
+--gradient-hero: linear-gradient(135deg, #2563EB, #06B6D4);
   
-/*  TAMAÑOS  */
-    --logo-height: 2rem;
+/*TAMAÑOS: para iconos*/
+--logo-height: 1.5rem;
 }
   
 /* =========================ENCABEZADO========================== */
-/*---------- Navbar ----------*/
 
-  
+/*---------- Navbar ----------*/
+.navbar {
+  background: var(--bs-dark);
+  background-image: var(--gradient-tech);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(243, 10, 10, 0.3), var(--glow-blue);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand img {
+  max-height: var(--logo-height);
+  transition: all 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.05) translateX(-5px);
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
+}
+
+.navbar .nav-link {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin: 0 12px;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: all 0.3s ease;
+  color: var(--bs-light);
+}
+
+.navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--bs-primary);
+  box-shadow: var(--glow-blue);
+  transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+
 /* =================HERO===================== */
 
 /*-- Seccion Inicio --*/
 #inicio {
-    padding: 5rem 0;
-    background: var(--gradient-tech);
+  padding: 4rem 0 5rem 0;               
+  background: var(--gradient-tech);      
+  position: relative;
+  overflow: hidden;                 
 }
-#inicio h1 {
-    background: var(--gradient-hero);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    display: inline-block;
+#inicio .badge.bg-primary {
+  background: var(--gradient-primary) !important; 
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  padding: 0.6rem 1.4rem;
+  border-radius: 50px;                
+  text-transform: uppercase;
+  box-shadow: var(--glow-blue);        
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: all 0.3s ease;
 }
-.badge.bg-primary {
-    background-color: var(--dark-light) !important;
-    font-size: 0.9rem;
-    padding: 0.5rem 1.2rem;
-    letter-spacing: 0.5px;
+#inicio .badge.bg-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(37, 99, 235, 0.5); /* Más brillo al hover */
+}
+#inicio h1 img {
+  display: inline-block;
+  max-height: 3.5rem;                 
+  width: auto;
+  filter: brightness(0) invert(1);    
+  margin-left: 0.25rem;
+  vertical-align: middle;
+}
+#inicio h1.display-4 {
+  color: var(--bs-light);                       
 }
 
 /*-- Indicadores --*/
